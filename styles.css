@@ -1,6 +1,29 @@
+/* common */
 body {
   margin: 0;
   padding: 0px;
+}
+
+.section_container {
+  max-width: 1222px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__header {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.35;
+  color: #313131;
+  text-transform: uppercase;
+}
+
+.section__header--naming {
+  color: #f54932;
+  font-weight: bold;
 }
 
 .button {
@@ -19,6 +42,21 @@ body {
   color: #1f1f1f;
 }
 
+.cell {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #313131;
+  padding: 15px 0;
+}
+
+.cell_last {
+  border-bottom: none !important;
+}
+
+/* hero section */
+
 .hero_section__wrapper {
   background-color: #e9ded4;
   height: 700px;
@@ -29,7 +67,7 @@ body {
 }
 
 .hero_section__container {
-  width: 1224px;
+  width: 1222px;
   margin-top: 26px;
 }
 
@@ -105,6 +143,8 @@ body {
   color: #ffffff;
 }
 
+/* ticker */
+
 .ticker__wrapper {
   max-width: 100%;
   overflow: hidden;
@@ -138,4 +178,64 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* support section */
+
+.support_section__container {
+  max-width: 1222px;
+  gap: 64px;
+  margin: 70px auto 30px;
+}
+
+/* simultaneous game section */
+
+.simultaneous_game_section__container {
+  gap: 16px;
+  margin: 0 auto 200px;
+}
+
+.simultaneous_game_section__content {
+  align-self: stretch;
+}
+
+.simultaneous_game_section__image {
+  margin-left: -25px;
+}
+
+.simultaneous_game_section__header {
+  margin-top: 27px;
+  margin-bottom: 47px;
+}
+
+.simultaneous_game_section__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 34px;
+}
+
+.simultaneous_game_section__key {
+  border-right: 2px solid #d0d0d0;
+  border-bottom: 2px solid #d0d0d0;
+  width: 304px;
+}
+
+.simultaneous_game_section__value {
+  border-bottom: 2px solid #d0d0d0;
+  padding-left: 16px;
+  font-weight: 600;
+}
+
+.simultaneous_game_section__outdated {
+  text-decoration: line-through;
+  text-decoration-color: #f54932;
+}
+
+.simultaneous_game_section__link {
+  color: #3087a2;
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
 }
