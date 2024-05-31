@@ -1,11 +1,19 @@
 /* common styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  transition: all 0.5s;
+}
+
 body {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
 button {
-  transition: all 0.5s;
   font-family: "Golos Text", sans-serif;
   font-size: 16px;
 }
@@ -32,19 +40,6 @@ button {
   font-weight: bold;
 }
 
-.button {
-  width: 263px;
-  height: 72px;
-  border-radius: 36px;
-  border: none;
-  background-color: transparent;
-  padding: 0px;
-  font-weight: 500;
-  line-height: 1.3;
-  padding: 10px 49px;
-  color: #1f1f1f;
-}
-
 .button_info {
   width: 113px;
   height: 35px;
@@ -69,17 +64,19 @@ button {
   padding: 15px 0;
 }
 
-.cell_last {
+.label_last {
   border-bottom: none !important;
 }
 
 .link {
   color: #3087a2;
-  font-family: "Golos Text", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2;
+  padding: unset;
   text-decoration: none;
+}
+
+.link:hover {
+  color: #f54932;
+  text-decoration: underline;
 }
 
 /* hero section */
@@ -151,6 +148,25 @@ button {
   gap: 16px;
 }
 
+.hero_section__button {
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  width: 263px;
+  height: 72px;
+  border-radius: 36px;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 13px 49px;
+  color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+}
+
 .hero_section__button--primary {
   background-color: #1f1f1f;
   color: #ffffff;
@@ -158,11 +174,8 @@ button {
 
 .hero_section__button--primary:hover {
   background-color: #fbce51;
+  border-color: #fbce51;
   color: #1f1f1f;
-}
-
-.hero_section__button--secondary {
-  border: 2px solid #1f1f1f;
 }
 
 .hero_section__button--secondary:hover {
@@ -394,7 +407,7 @@ button {
   background-color: #fbce51;
 }
 
-.participant__button:disabled {
+.participants__button:disabled {
   background-color: #d6d6d6;
   cursor: not-allowed;
 }
@@ -416,12 +429,20 @@ button {
   left: 11px;
 }
 
-.participants__grid {
-  display: flex;
-  justify-content: space-between;
+.participants__list {
+  max-width: 1222px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
 
-.participants__participant {
+.participants__list_inner {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.participants__card {
   width: 394px;
   height: 462px;
   display: flex;

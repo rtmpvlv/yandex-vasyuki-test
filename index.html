@@ -35,13 +35,19 @@
             васюкинского турнира по шахматам
           </p>
           <div class="hero_section__buttons">
-            <button class="button hero_section__button--primary">
+            <a
+              href="#support"
+              class="hero_section__button hero_section__button--primary"
+            >
               Поддержать шахматную мысль
-            </button>
-            <button class="button hero_section__button--secondary">
+            </a>
+            <a
+              href="#details"
+              class="hero_section__button hero_section__button--secondary"
+            >
               Подробнее <br />
               о турнире
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -60,7 +66,7 @@
         </span>
       </div>
     </section>
-    <section class="section_container support_section__container">
+    <section id="support" class="section_container support_section__container">
       <h3 class="header support_section__header">
         Чтобы поддержать Международный васюкинский турнир посетите лекцию на
         тему:
@@ -72,7 +78,10 @@
         class="support_section__image"
       />
     </section>
-    <section class="section_container simultaneous_game_section__container">
+    <section
+      id="details"
+      class="section_container simultaneous_game_section__container"
+    >
       <img
         src="images/simultaneous_game.png"
         alt="simultaneous_game"
@@ -115,16 +124,16 @@
             <td class="label simultaneous_game_section__value">50 коп.</td>
           </tr>
           <tr>
-            <td class="label cell_last simultaneous_game_section__key">
+            <td class="label label_last simultaneous_game_section__key">
               Взнос на телеграммы:
             </td>
-            <td class="label cell_last simultaneous_game_section__value">
+            <td class="label label_last simultaneous_game_section__value">
               <span class="simultaneous_game_section__outdated">100 руб. </span>
               &nbsp;21 руб. 16 коп.
             </td>
           </tr>
         </table>
-        <a href="#" class="link"
+        <a href="#" class="label link"
           >По всем вопросам обращаться в администрацию к К. Михельсону</a
         >
       </article>
@@ -132,7 +141,7 @@
     <section class="section_container stages__container">
       <div class="stages__header_container">
         <h2 class="header stages__header">Этапы преображения Васюков</h2>
-        <a href="#" class="link stages__link"
+        <a href="#" class="label link stages__link"
           >Будущие источники обогащения васюкинцев</a
         >
       </div>
@@ -175,46 +184,84 @@
       <div class="participants__header_container">
         <h2 class="header participants__header">Участники турнира</h2>
         <div class="participants__conrols">
-          <button class="participants__button participants__button--prev">
+          <button
+            id="prevButton"
+            class="participants__button participants__button--prev"
+          >
             <span class="participants__arrow"></span>
           </button>
-          <span class="participants__page">3/6</span>
-          <button class="participants__button participants__button--next">
+          <span class="participants__page" id="pageIndicator">3/6</span>
+          <button
+            id="nextButton"
+            class="participants__button participants__button--next"
+          >
             <span class="participants__arrow participants__arrow--right"></span>
           </button>
         </div>
       </div>
-      <div class="participants__grid">
-        <article class="participants__participant">
-          <img
-            src="images/person.png"
-            alt="Хозе-Рауль Капабланка"
-            class="participant__image"
-          />
-          <h3 class="participant__name">Хозе-Рауль Капабланка</h3>
-          <p class="label participant__title">Чемпион мира по шахматам</p>
-          <button class="button_info">Подробнее</button>
-        </article>
-        <article class="participants__participant">
-          <img
-            src="images/person.png"
-            alt="Эммануил Ласкер"
-            class="participant__image"
-          />
-          <h3 class="participant__name">Эммануил Ласкер</h3>
-          <p class="label participant__title">Чемпион мира по шахматам</p>
-          <button class="button_info">Подробнее</button>
-        </article>
-        <article class="participants__participant">
-          <img
-            src="images/person.png"
-            alt="Александр Алехин"
-            class="participant__image"
-          />
-          <h3 class="participant__name">Александр Алехин</h3>
-          <p class="label participant__title">Чемпион мира по шахматам</p>
-          <button class="button_info">Подробнее</button>
-        </article>
+      <div class="participants__list">
+        <div id="participantsList" class="participants__list_inner">
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Хозе-Рауль Капабланка"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Хозе-Рауль Капабланка</h3>
+            <p class="label participant__title">Чемпион мира по шахматам</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Эммануил Ласкер"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Эммануил Ласкер</h3>
+            <p class="label participant__title">Чемпион мира по шахматам</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Александр Алехин"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Александр Алехин</h3>
+            <p class="label participant__title">Чемпион мира по шахматам</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Арон Нимцович"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Арон Нимцович</h3>
+            <p class="label participant__title">Чемпион мира по шахматам</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Рихарт Рети"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Рихарт Рети</h3>
+            <p class="label participant__title">Чемпион мира по шахматам</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+          <article class="participants__card">
+            <img
+              src="images/person.png"
+              alt="Александр Алехин"
+              class="participant__image"
+            />
+            <h3 class="participant__name">Остап Бендер</h3>
+            <p class="label participant__title">Гроссмейстер</p>
+            <button class="button_info">Подробнее</button>
+          </article>
+        </div>
       </div>
     </section>
     <section class="ticker__wrapper">
@@ -240,6 +287,6 @@
         </p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
