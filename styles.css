@@ -1,7 +1,13 @@
-/* common */
+/* common styles */
 body {
   margin: 0;
   padding: 0px;
+}
+
+button {
+  transition: all 0.5s;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
 }
 
 .section_container {
@@ -12,16 +18,16 @@ body {
   justify-content: center;
 }
 
-.section__header {
+.header {
   font-family: "Merriweather", serif;
   font-weight: 400;
-  font-size: 36px;
   line-height: 1.35;
+  font-size: 54px;
   color: #313131;
   text-transform: uppercase;
 }
 
-.section__header--naming {
+.header--naming {
   color: #f54932;
   font-weight: bold;
 }
@@ -33,16 +39,28 @@ body {
   border: none;
   background-color: transparent;
   padding: 0px;
-  transition: all 0.5s;
-  font-family: "Golos Text", sans-serif;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.3;
   padding: 10px 49px;
   color: #1f1f1f;
 }
 
-.cell {
+.button_info {
+  width: 113px;
+  height: 35px;
+  border-radius: 18px;
+  border: 1px solid #3057a2;
+  color: #3057a2;
+  background-color: transparent;
+  line-height: 1.2;
+}
+
+.button_info:hover {
+  background-color: #3057a2;
+  color: #ffffff;
+}
+
+.label {
   font-family: "Golos Text", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -53,6 +71,15 @@ body {
 
 .cell_last {
   border-bottom: none !important;
+}
+
+.link {
+  color: #3087a2;
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 /* hero section */
@@ -188,11 +215,15 @@ body {
   margin: 70px auto 30px;
 }
 
+.support_section__header {
+  font-size: 36px;
+}
+
 /* simultaneous game section */
 
 .simultaneous_game_section__container {
   gap: 16px;
-  margin: 0 auto 200px;
+  margin: 0 auto 187px;
 }
 
 .simultaneous_game_section__content {
@@ -200,10 +231,11 @@ body {
 }
 
 .simultaneous_game_section__image {
-  margin-left: -25px;
+  margin-left: -28px;
 }
 
 .simultaneous_game_section__header {
+  font-size: 36px;
   margin-top: 27px;
   margin-bottom: 47px;
 }
@@ -231,11 +263,220 @@ body {
   text-decoration-color: #f54932;
 }
 
-.simultaneous_game_section__link {
-  color: #3087a2;
+/* stages section */
+
+.stages__container {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 225px;
+}
+
+.stages__header_container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 54px;
+}
+
+.stages__header {
+  max-width: 806px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stages__link {
+  max-width: 280px;
+  margin-left: -505px;
+  margin-bottom: 9px;
+}
+
+.stages__grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 394px);
+  grid-template-rows: repeat(3, 112px);
+  gap: 20px;
+  position: relative;
+}
+
+.stages__grid_item {
+  padding: 20px;
+  padding-left: 72px;
+  margin: 0;
   font-family: "Golos Text", sans-serif;
-  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.stages__grid_item--1 {
+  background-image: url("images/grid-item-1.png");
+}
+
+.stages__grid_item--2 {
+  background-image: url("images/grid-item-2.png");
+}
+
+.stages__grid_item--tall {
+  grid-row: span 2;
+  background-image: url("images/grid-item-3.png");
+}
+
+.stages__grid_item--4 {
+  background-image: url("images/grid-item-4.png");
+}
+
+.stages__grid_item--5 {
+  background-image: url("images/grid-item-5.png");
+}
+
+.stages__grid_item--6 {
+  background-image: url("images/grid-item-6.png");
+  height: 136px;
+}
+
+.stages__grid_item--wide {
+  background-image: url("images/grid-item-7.png");
+  grid-column: span 2;
+  height: 136px;
+}
+
+.stages__image {
+  position: absolute;
+  bottom: -26px;
+  right: -64px;
+}
+
+/* participants section */
+.participants__container {
+  max-width: 1222px;
+  margin: 0 auto 140px;
+}
+
+.participants__header_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+  margin-bottom: 60px;
+}
+
+.participants__header {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.participants__conrols {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.participants__page {
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  text-decoration: none;
+  color: #313131;
+  letter-spacing: 3px;
+}
+
+.participants__button {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #313131;
+  border: none;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.participants__button:hover {
+  background-color: #fbce51;
+}
+
+.participant__button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.participants__arrow {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  display: block;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+  top: 14px;
+  left: 18px;
+}
+
+.participants__arrow--right {
+  transform: rotate(225deg);
+  left: 11px;
+}
+
+.participants__grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.participants__participant {
+  width: 394px;
+  height: 462px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.participant__image {
+  width: 320px;
+  height: 320px;
+  margin-bottom: 28px;
+}
+
+.participant__name {
+  font-family: "Golos Text", serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.participant__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 17px;
+}
+
+.participant__button {
+  width: 160px;
+  height: 40px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.participant__button:hover {
+  background-color: #fbce51;
+  color: #1f1f1f;
+}
+
+/* footer */
+.footer {
+  height: 150px;
+  background-color: #e9ded4;
+}
+
+.footer__text {
+  margin: 0;
+  padding-top: 40px;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  color: #313131;
+  text-align: start;
 }
