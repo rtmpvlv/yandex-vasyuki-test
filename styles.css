@@ -188,6 +188,7 @@ button {
 .ticker__wrapper {
   max-width: 100%;
   overflow: hidden;
+  white-space: nowrap;
   background-color: #f54932;
 }
 
@@ -213,10 +214,10 @@ button {
 
 @keyframes ticker {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-98%);
   }
 }
 
